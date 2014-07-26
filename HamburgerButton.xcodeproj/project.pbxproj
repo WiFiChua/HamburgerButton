@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A40CBFB1983F06300AF8B93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A40CBFA1983F06300AF8B93 /* Foundation.framework */; };
+		8A40CBFD1983F06300AF8B93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A40CBFC1983F06300AF8B93 /* CoreGraphics.framework */; };
+		8A40CBFF1983F06300AF8B93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A40CBFE1983F06300AF8B93 /* UIKit.framework */; };
+		8A40CC051983F06300AF8B93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A40CC031983F06300AF8B93 /* InfoPlist.strings */; };
+		8A40CC071983F06300AF8B93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A40CC061983F06300AF8B93 /* main.m */; };
+		8A40CC0B1983F06300AF8B93 /* LBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A40CC0A1983F06300AF8B93 /* LBAppDelegate.m */; };
+		8A40CC0E1983F06300AF8B93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A40CC0C1983F06300AF8B93 /* Main.storyboard */; };
+		8A40CC111983F06300AF8B93 /* LBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A40CC101983F06300AF8B93 /* LBViewController.m */; };
+		8A40CC131983F06300AF8B93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A40CC121983F06300AF8B93 /* Images.xcassets */; };
+		8A40CC1A1983F06300AF8B93 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A40CC191983F06300AF8B93 /* XCTest.framework */; };
+		8A40CC1B1983F06300AF8B93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A40CBFA1983F06300AF8B93 /* Foundation.framework */; };
+		8A40CC1C1983F06300AF8B93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A40CBFE1983F06300AF8B93 /* UIKit.framework */; };
+		8A40CC241983F06300AF8B93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A40CC221983F06300AF8B93 /* InfoPlist.strings */; };
+		8A40CC261983F06300AF8B93 /* HamburgerButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A40CC251983F06300AF8B93 /* HamburgerButtonTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A40CC1D1983F06300AF8B93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A40CBEF1983F06300AF8B93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A40CBF61983F06300AF8B93;
+			remoteInfo = HamburgerButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A40CBF71983F06300AF8B93 /* HamburgerButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HamburgerButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A40CBFA1983F06300AF8B93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8A40CBFC1983F06300AF8B93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8A40CBFE1983F06300AF8B93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8A40CC021983F06300AF8B93 /* HamburgerButton-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HamburgerButton-Info.plist"; sourceTree = "<group>"; };
+		8A40CC041983F06300AF8B93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8A40CC061983F06300AF8B93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8A40CC081983F06300AF8B93 /* HamburgerButton-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HamburgerButton-Prefix.pch"; sourceTree = "<group>"; };
+		8A40CC091983F06300AF8B93 /* LBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBAppDelegate.h; sourceTree = "<group>"; };
+		8A40CC0A1983F06300AF8B93 /* LBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBAppDelegate.m; sourceTree = "<group>"; };
+		8A40CC0D1983F06300AF8B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A40CC0F1983F06300AF8B93 /* LBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBViewController.h; sourceTree = "<group>"; };
+		8A40CC101983F06300AF8B93 /* LBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBViewController.m; sourceTree = "<group>"; };
+		8A40CC121983F06300AF8B93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8A40CC181983F06300AF8B93 /* HamburgerButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HamburgerButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A40CC191983F06300AF8B93 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8A40CC211983F06300AF8B93 /* HamburgerButtonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HamburgerButtonTests-Info.plist"; sourceTree = "<group>"; };
+		8A40CC231983F06300AF8B93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8A40CC251983F06300AF8B93 /* HamburgerButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HamburgerButtonTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A40CBF41983F06300AF8B93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A40CBFD1983F06300AF8B93 /* CoreGraphics.framework in Frameworks */,
+				8A40CBFF1983F06300AF8B93 /* UIKit.framework in Frameworks */,
+				8A40CBFB1983F06300AF8B93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A40CC151983F06300AF8B93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A40CC1A1983F06300AF8B93 /* XCTest.framework in Frameworks */,
+				8A40CC1C1983F06300AF8B93 /* UIKit.framework in Frameworks */,
+				8A40CC1B1983F06300AF8B93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A40CBEE1983F06300AF8B93 = {
+			isa = PBXGroup;
+			children = (
+				8A40CC001983F06300AF8B93 /* HamburgerButton */,
+				8A40CC1F1983F06300AF8B93 /* HamburgerButtonTests */,
+				8A40CBF91983F06300AF8B93 /* Frameworks */,
+				8A40CBF81983F06300AF8B93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A40CBF81983F06300AF8B93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A40CBF71983F06300AF8B93 /* HamburgerButton.app */,
+				8A40CC181983F06300AF8B93 /* HamburgerButtonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A40CBF91983F06300AF8B93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A40CBFA1983F06300AF8B93 /* Foundation.framework */,
+				8A40CBFC1983F06300AF8B93 /* CoreGraphics.framework */,
+				8A40CBFE1983F06300AF8B93 /* UIKit.framework */,
+				8A40CC191983F06300AF8B93 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A40CC001983F06300AF8B93 /* HamburgerButton */ = {
+			isa = PBXGroup;
+			children = (
+				8A40CC091983F06300AF8B93 /* LBAppDelegate.h */,
+				8A40CC0A1983F06300AF8B93 /* LBAppDelegate.m */,
+				8A40CC0C1983F06300AF8B93 /* Main.storyboard */,
+				8A40CC0F1983F06300AF8B93 /* LBViewController.h */,
+				8A40CC101983F06300AF8B93 /* LBViewController.m */,
+				8A40CC121983F06300AF8B93 /* Images.xcassets */,
+				8A40CC011983F06300AF8B93 /* Supporting Files */,
+			);
+			path = HamburgerButton;
+			sourceTree = "<group>";
+		};
+		8A40CC011983F06300AF8B93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A40CC021983F06300AF8B93 /* HamburgerButton-Info.plist */,
+				8A40CC031983F06300AF8B93 /* InfoPlist.strings */,
+				8A40CC061983F06300AF8B93 /* main.m */,
+				8A40CC081983F06300AF8B93 /* HamburgerButton-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A40CC1F1983F06300AF8B93 /* HamburgerButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A40CC251983F06300AF8B93 /* HamburgerButtonTests.m */,
+				8A40CC201983F06300AF8B93 /* Supporting Files */,
+			);
+			path = HamburgerButtonTests;
+			sourceTree = "<group>";
+		};
+		8A40CC201983F06300AF8B93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A40CC211983F06300AF8B93 /* HamburgerButtonTests-Info.plist */,
+				8A40CC221983F06300AF8B93 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A40CBF61983F06300AF8B93 /* HamburgerButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A40CC291983F06400AF8B93 /* Build configuration list for PBXNativeTarget "HamburgerButton" */;
+			buildPhases = (
+				8A40CBF31983F06300AF8B93 /* Sources */,
+				8A40CBF41983F06300AF8B93 /* Frameworks */,
+				8A40CBF51983F06300AF8B93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HamburgerButton;
+			productName = HamburgerButton;
+			productReference = 8A40CBF71983F06300AF8B93 /* HamburgerButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A40CC171983F06300AF8B93 /* HamburgerButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A40CC2C1983F06400AF8B93 /* Build configuration list for PBXNativeTarget "HamburgerButtonTests" */;
+			buildPhases = (
+				8A40CC141983F06300AF8B93 /* Sources */,
+				8A40CC151983F06300AF8B93 /* Frameworks */,
+				8A40CC161983F06300AF8B93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A40CC1E1983F06300AF8B93 /* PBXTargetDependency */,
+			);
+			name = HamburgerButtonTests;
+			productName = HamburgerButtonTests;
+			productReference = 8A40CC181983F06300AF8B93 /* HamburgerButtonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A40CBEF1983F06300AF8B93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Bang Nguyen";
+				TargetAttributes = {
+					8A40CC171983F06300AF8B93 = {
+						TestTargetID = 8A40CBF61983F06300AF8B93;
+					};
+				};
+			};
+			buildConfigurationList = 8A40CBF21983F06300AF8B93 /* Build configuration list for PBXProject "HamburgerButton" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A40CBEE1983F06300AF8B93;
+			productRefGroup = 8A40CBF81983F06300AF8B93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A40CBF61983F06300AF8B93 /* HamburgerButton */,
+				8A40CC171983F06300AF8B93 /* HamburgerButtonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A40CBF51983F06300AF8B93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A40CC131983F06300AF8B93 /* Images.xcassets in Resources */,
+				8A40CC051983F06300AF8B93 /* InfoPlist.strings in Resources */,
+				8A40CC0E1983F06300AF8B93 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A40CC161983F06300AF8B93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A40CC241983F06300AF8B93 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A40CBF31983F06300AF8B93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A40CC0B1983F06300AF8B93 /* LBAppDelegate.m in Sources */,
+				8A40CC071983F06300AF8B93 /* main.m in Sources */,
+				8A40CC111983F06300AF8B93 /* LBViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A40CC141983F06300AF8B93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A40CC261983F06300AF8B93 /* HamburgerButtonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A40CC1E1983F06300AF8B93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A40CBF61983F06300AF8B93 /* HamburgerButton */;
+			targetProxy = 8A40CC1D1983F06300AF8B93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A40CC031983F06300AF8B93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A40CC041983F06300AF8B93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8A40CC0C1983F06300AF8B93 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A40CC0D1983F06300AF8B93 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A40CC221983F06300AF8B93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A40CC231983F06300AF8B93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A40CC271983F06400AF8B93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8A40CC281983F06400AF8B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A40CC2A1983F06400AF8B93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HamburgerButton/HamburgerButton-Prefix.pch";
+				INFOPLIST_FILE = "HamburgerButton/HamburgerButton-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8A40CC2B1983F06400AF8B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HamburgerButton/HamburgerButton-Prefix.pch";
+				INFOPLIST_FILE = "HamburgerButton/HamburgerButton-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8A40CC2D1983F06400AF8B93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HamburgerButton.app/HamburgerButton";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HamburgerButton/HamburgerButton-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HamburgerButtonTests/HamburgerButtonTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8A40CC2E1983F06400AF8B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HamburgerButton.app/HamburgerButton";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HamburgerButton/HamburgerButton-Prefix.pch";
+				INFOPLIST_FILE = "HamburgerButtonTests/HamburgerButtonTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A40CBF21983F06300AF8B93 /* Build configuration list for PBXProject "HamburgerButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A40CC271983F06400AF8B93 /* Debug */,
+				8A40CC281983F06400AF8B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A40CC291983F06400AF8B93 /* Build configuration list for PBXNativeTarget "HamburgerButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A40CC2A1983F06400AF8B93 /* Debug */,
+				8A40CC2B1983F06400AF8B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8A40CC2C1983F06400AF8B93 /* Build configuration list for PBXNativeTarget "HamburgerButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A40CC2D1983F06400AF8B93 /* Debug */,
+				8A40CC2E1983F06400AF8B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A40CBEF1983F06300AF8B93 /* Project object */;
+}
