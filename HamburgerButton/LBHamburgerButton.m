@@ -121,8 +121,6 @@
                     animPosition.fillMode = kCAFillModeForwards;
                     
                     return @[ animRotate, animPosition ];
-                    
-                    break;
                 }
                 case 1:
                 {
@@ -130,8 +128,6 @@
                     animRotate.values = forward ? @[ @0, @(M_PI) ] : @[ @(M_PI), @0];
                     
                     return @[ animRotate ];
-                    
-                    break;
                 }
                 case 2:
                 {
@@ -150,8 +146,6 @@
                     animPosition.fillMode = kCAFillModeForwards;
                     
                     return @[ animRotate, animPosition ];
-                    
-                    break;
                 }
                 default:
                     break;
@@ -178,8 +172,6 @@
                     animPosition.fillMode = kCAFillModeForwards;
                     
                     return @[ animRotate, animPosition ];
-                    
-                    break;
                 }
                 case 1:
                 {
@@ -190,8 +182,6 @@
                     animScale.values = forward ? @[ @1, @0.1 ] : @[ @0.1, @1 ];
                     
                     return @[ animRotate, animScale ];
-                    
-                    break;
                 }
                 case 2:
                 {
@@ -210,8 +200,6 @@
                     animPosition.fillMode = kCAFillModeForwards;
                     
                     return @[ animRotate, animPosition ];
-                    
-                    break;
                 }
                 default:
                     break;
