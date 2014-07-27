@@ -21,6 +21,8 @@
 		8A40CC1C1983F06300AF8B93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A40CBFE1983F06300AF8B93 /* UIKit.framework */; };
 		8A40CC241983F06300AF8B93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A40CC221983F06300AF8B93 /* InfoPlist.strings */; };
 		8A40CC261983F06300AF8B93 /* HamburgerButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A40CC251983F06300AF8B93 /* HamburgerButtonTests.m */; };
+		8A40CC311983F28500AF8B93 /* LBHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A40CC301983F28500AF8B93 /* LBHamburgerButton.m */; };
+		8A40CC331983FB4C00AF8B93 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A40CC321983FB4C00AF8B93 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		8A40CC211983F06300AF8B93 /* HamburgerButtonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HamburgerButtonTests-Info.plist"; sourceTree = "<group>"; };
 		8A40CC231983F06300AF8B93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8A40CC251983F06300AF8B93 /* HamburgerButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HamburgerButtonTests.m; sourceTree = "<group>"; };
+		8A40CC2F1983F28500AF8B93 /* LBHamburgerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBHamburgerButton.h; sourceTree = "<group>"; };
+		8A40CC301983F28500AF8B93 /* LBHamburgerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBHamburgerButton.m; sourceTree = "<group>"; };
+		8A40CC321983FB4C00AF8B93 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A40CC331983FB4C00AF8B93 /* QuartzCore.framework in Frameworks */,
 				8A40CBFD1983F06300AF8B93 /* CoreGraphics.framework in Frameworks */,
 				8A40CBFF1983F06300AF8B93 /* UIKit.framework in Frameworks */,
 				8A40CBFB1983F06300AF8B93 /* Foundation.framework in Frameworks */,
@@ -101,6 +107,7 @@
 		8A40CBF91983F06300AF8B93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A40CC321983FB4C00AF8B93 /* QuartzCore.framework */,
 				8A40CBFA1983F06300AF8B93 /* Foundation.framework */,
 				8A40CBFC1983F06300AF8B93 /* CoreGraphics.framework */,
 				8A40CBFE1983F06300AF8B93 /* UIKit.framework */,
@@ -112,6 +119,8 @@
 		8A40CC001983F06300AF8B93 /* HamburgerButton */ = {
 			isa = PBXGroup;
 			children = (
+				8A40CC2F1983F28500AF8B93 /* LBHamburgerButton.h */,
+				8A40CC301983F28500AF8B93 /* LBHamburgerButton.m */,
 				8A40CC091983F06300AF8B93 /* LBAppDelegate.h */,
 				8A40CC0A1983F06300AF8B93 /* LBAppDelegate.m */,
 				8A40CC0C1983F06300AF8B93 /* Main.storyboard */,
@@ -251,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A40CC0B1983F06300AF8B93 /* LBAppDelegate.m in Sources */,
+				8A40CC311983F28500AF8B93 /* LBHamburgerButton.m in Sources */,
 				8A40CC071983F06300AF8B93 /* main.m in Sources */,
 				8A40CC111983F06300AF8B93 /* LBViewController.m in Sources */,
 			);
