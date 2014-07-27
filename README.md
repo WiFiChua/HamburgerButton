@@ -1,5 +1,4 @@
 # LBHamburgerButton #
-===============
 
 Bang Nguyen
 
