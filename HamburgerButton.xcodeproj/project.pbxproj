@@ -390,6 +390,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HamburgerButton/HamburgerButton-Prefix.pch";
 				INFOPLIST_FILE = "HamburgerButton/HamburgerButton-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -403,6 +404,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HamburgerButton/HamburgerButton-Prefix.pch";
 				INFOPLIST_FILE = "HamburgerButton/HamburgerButton-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -467,6 +469,7 @@
 				8A40CC2B1983F06400AF8B93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A40CC2C1983F06400AF8B93 /* Build configuration list for PBXNativeTarget "HamburgerButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +478,7 @@
 				8A40CC2E1983F06400AF8B93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

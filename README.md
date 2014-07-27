@@ -6,6 +6,8 @@ Bang Nguyen
 
 http://luongbang.me
 
+[![HamburgerButton](http://luongbang.me/hamburgerbutton.gif)](http://youtu.be/9l2yCMIlEPQ)
+
 ## Overview ##
 
 LBHamburgerButton is an iOS control that displays 3 lines (hamburger) and other icon (back, close...) without using image. It has a beautiful, clean and smooth transition between 2 state like Google Material Design or "close button" of Paper app.
