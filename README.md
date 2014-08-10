@@ -4,7 +4,7 @@ Bang Nguyen
 
 @luongbang152
 
-http://luongbang.me
+http://luongbang.me/2014/07/great-animation-hamburger-button/
 
 [![HamburgerButton](http://luongbang.me/hamburgerbutton.gif)](http://youtu.be/9l2yCMIlEPQ)
 
