@@ -23,6 +23,8 @@
 		8A40CC261983F06300AF8B93 /* HamburgerButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A40CC251983F06300AF8B93 /* HamburgerButtonTests.m */; };
 		8A40CC311983F28500AF8B93 /* LBHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A40CC301983F28500AF8B93 /* LBHamburgerButton.m */; };
 		8A40CC331983FB4C00AF8B93 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A40CC321983FB4C00AF8B93 /* QuartzCore.framework */; };
+		8AF7E1BB19B6CD5A00F765E2 /* LBHamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7E1BA19B6CD5A00F765E2 /* LBHamburgerButton.swift */; };
+		8AFFDE5F19B7627600115E17 /* LBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFDE5E19B7627600115E17 /* LBViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		8A40CC2F1983F28500AF8B93 /* LBHamburgerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBHamburgerButton.h; sourceTree = "<group>"; };
 		8A40CC301983F28500AF8B93 /* LBHamburgerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBHamburgerButton.m; sourceTree = "<group>"; };
 		8A40CC321983FB4C00AF8B93 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8AF7E1BA19B6CD5A00F765E2 /* LBHamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBHamburgerButton.swift; sourceTree = "<group>"; };
+		8AFFDE5E19B7627600115E17 /* LBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				8A40CC101983F06300AF8B93 /* LBViewController.m */,
 				8A40CC121983F06300AF8B93 /* Images.xcassets */,
 				8A40CC011983F06300AF8B93 /* Supporting Files */,
+				8AF7E1BA19B6CD5A00F765E2 /* LBHamburgerButton.swift */,
+				8AFFDE5E19B7627600115E17 /* LBViewController.swift */,
 			);
 			path = HamburgerButton;
 			sourceTree = "<group>";
@@ -261,7 +267,9 @@
 			files = (
 				8A40CC0B1983F06300AF8B93 /* LBAppDelegate.m in Sources */,
 				8A40CC311983F28500AF8B93 /* LBHamburgerButton.m in Sources */,
+				8AFFDE5F19B7627600115E17 /* LBViewController.swift in Sources */,
 				8A40CC071983F06300AF8B93 /* main.m in Sources */,
+				8AF7E1BB19B6CD5A00F765E2 /* LBHamburgerButton.swift in Sources */,
 				8A40CC111983F06300AF8B93 /* LBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,11 +395,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HamburgerButton/HamburgerButton-Prefix.pch";
 				INFOPLIST_FILE = "HamburgerButton/HamburgerButton-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -401,10 +412,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HamburgerButton/HamburgerButton-Prefix.pch";
 				INFOPLIST_FILE = "HamburgerButton/HamburgerButton-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
