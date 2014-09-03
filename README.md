@@ -35,6 +35,10 @@ buttonHamburger = [[LBHamburgerButton alloc] initWithFrame:CGRectMake(0, 0, 100,
                              lineCenter:CGPointMake(50, 50)
                                   color:[UIColor whiteColor]];
 ```
+```swift
+var hamburgerButton = LBHamburgerButton(frame: CGRectMake(0, 0, 100, 100))
+hamburgerButton.setUpHamburger(type: LBHamburgerButtonType.CloseButton, lineWidth: 50, lineHeight: 50/6, lineSpacing: 5, lineCenter: CGPointMake(50, 50), color: UIColor.whiteColor())
+```
 
 or use full contructor like this:
 
@@ -47,6 +51,9 @@ buttonHamburger = [[LBHamburgerButton alloc] initWithFrame:CGRectMake(0, 0, 100,
                                                 lineCenter:CGPointMake(50, 50)
                                                      color:[UIColor whiteColor]];
 ```
+```swift
+var hamburgerButton = LBHamburgerButton(frame: CGRectMake(0, 0, 100, 100), type: LBHamburgerButtonType.CloseButton, lineWidth: 50, lineHeight: 50/6, lineSpacing: 5, lineCenter: CGPointMake(50, 50), color: UIColor.whiteColor())
+```
 
 Set other propertises, add target add it to view like UIButton.
 
@@ -57,6 +64,13 @@ Set other propertises, add target add it to view like UIButton.
 
 [self.view addSubview:buttonHamburger];
 ```
+```swift
+hamburgerButton.center = CGPointMake(120, 120)
+hamburgerButton.backgroundColor = UIColor.blackColor()
+hamburgerButton.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+
+self.view.addSubview(hamburgerButton)
+```
 
 When you want to switch state, just call `switchState`.
 
@@ -66,8 +80,17 @@ When you want to switch state, just call `switchState`.
     [btn switchState];
 }
 ```
+```swift
+func buttonPressed(sender: UIButton) {
+  var btn = sender as LBHamburgerButton
+  btn.switchState()
+}
+```
 
 ## Release notes
+
+Version 1.0.1
+Convert to Swift
 
 Version 1.0
 

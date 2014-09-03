@@ -101,11 +101,11 @@ class LBHamburgerButton: UIButton {
         
         super.init(frame: frame)
         
-        self.setUpHamburger(type, lineWidth: lineWidth, lineHeight: lineHeight, lineSpacing: lineSpacing, lineCenter: lineCenter, color: color)
+        self.setUpHamburger(type: type, lineWidth: lineWidth, lineHeight: lineHeight, lineSpacing: lineSpacing, lineCenter: lineCenter, color: color)
         
     }
     
-    func setUpHamburger(type:LBHamburgerButtonType, lineWidth:CGFloat, lineHeight:CGFloat, lineSpacing:CGFloat, lineCenter:CGPoint, color:UIColor) {
+    func setUpHamburger(#type:LBHamburgerButtonType, lineWidth:CGFloat, lineHeight:CGFloat, lineSpacing:CGFloat, lineCenter:CGPoint, color:UIColor) {
         
         if (_lineCreated) {
             // Lines have been created, do nothing.
