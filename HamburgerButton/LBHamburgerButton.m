@@ -70,6 +70,14 @@
     _hamburgerState = (_hamburgerState == LBHamburgerButtonStateHamburger) ? LBHamburgerButtonStateNotHamburger : LBHamburgerButtonStateHamburger;
 }
 
+-(void)setState:(LBHamburgerButtonState)state
+{
+    if(_hamburgerState == state)
+        return;
+    else
+        [self switchState];
+}
+
 #pragma mark -
 #pragma mark - Private functions
 
