@@ -122,6 +122,11 @@ typedef enum {
  */
 - (void)switchState;
 
+/**
+ * Animate from current state to specfied state.
+ */
+- (void)setState:(LBHamburgerButtonState)state;
+
 @end
 
 /**
