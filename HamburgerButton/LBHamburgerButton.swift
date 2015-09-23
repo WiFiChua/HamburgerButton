@@ -91,7 +91,7 @@ class LBHamburgerButton: UIButton {
     // MARK:
     // MARK: Public functions
     
-    required init(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         fatalError("NSCoding not supported")
     }
     
@@ -105,7 +105,7 @@ class LBHamburgerButton: UIButton {
         
     }
     
-    func setUpHamburger(#type:LBHamburgerButtonType, lineWidth:CGFloat, lineHeight:CGFloat, lineSpacing:CGFloat, lineCenter:CGPoint, color:UIColor) {
+    func setUpHamburger(type type:LBHamburgerButtonType, lineWidth:CGFloat, lineHeight:CGFloat, lineSpacing:CGFloat, lineCenter:CGPoint, color:UIColor) {
         
         if (_lineCreated) {
             // Lines have been created, do nothing.
@@ -118,9 +118,9 @@ class LBHamburgerButton: UIButton {
         _lineSpacing = lineSpacing
         _lineCenter = lineCenter
         
-        var topLine = CAShapeLayer(frame: CGRectMake(0, 0, lineWidth, lineHeight), color: color, position: CGPointMake(lineCenter.x, lineCenter.y - lineHeight - lineSpacing))
-        var middleLine = CAShapeLayer(frame: CGRectMake(0, 0, lineWidth, lineHeight), color: color, position: lineCenter)
-        var bottomLine = CAShapeLayer(frame: CGRectMake(0, 0, lineWidth, lineHeight), color: color, position: CGPointMake(lineCenter.x, lineCenter.y + lineHeight + lineSpacing))
+        let topLine = CAShapeLayer(frame: CGRectMake(0, 0, lineWidth, lineHeight), color: color, position: CGPointMake(lineCenter.x, lineCenter.y - lineHeight - lineSpacing))
+        let middleLine = CAShapeLayer(frame: CGRectMake(0, 0, lineWidth, lineHeight), color: color, position: lineCenter)
+        let bottomLine = CAShapeLayer(frame: CGRectMake(0, 0, lineWidth, lineHeight), color: color, position: CGPointMake(lineCenter.x, lineCenter.y + lineHeight + lineSpacing))
         
         _lineArray = [ topLine, middleLine, bottomLine]
         
@@ -139,8 +139,8 @@ class LBHamburgerButton: UIButton {
     // MARK:
     // MARK: Private functions
     
-    private func animateButton(#forward:Bool) {
-        var anims = [ keyframeAnimations(lineIndex: 0, forward: forward), keyframeAnimations(lineIndex: 1, forward: forward), keyframeAnimations(lineIndex: 2, forward: forward) ]
+    private func animateButton(forward forward:Bool) {
+        let anims = [ keyframeAnimations(lineIndex: 0, forward: forward), keyframeAnimations(lineIndex: 1, forward: forward), keyframeAnimations(lineIndex: 2, forward: forward) ]
         
         CATransaction.begin()
         CATransaction.setAnimationDuration(hamburgerAnimationDuration)
@@ -148,12 +148,12 @@ class LBHamburgerButton: UIButton {
         
         var index = 0
         for animations in anims {
-            var layer = _lineArray[index]
+            let layer = _lineArray[index]
             for anim in animations! {
                 if !anim.removedOnCompletion {
                     layer.addAnimation(anim, forKey: anim.keyPath)
                 } else {
-                    layer.addAnimation(anim, value: anim.values.last as NSValue, keyPath: anim.keyPath)
+                    layer.addAnimation(anim, value: anim.values!.last as! NSValue, keyPath: anim.keyPath)
                 }
             }
             index++
@@ -161,42 +161,42 @@ class LBHamburgerButton: UIButton {
         CATransaction.commit()
     }
     
-    private func keyframeAnimations(#lineIndex:Int, forward:Bool) -> [CAKeyframeAnimation]? {
+    private func keyframeAnimations(lineIndex lineIndex:Int, forward:Bool) -> [CAKeyframeAnimation]? {
         switch hamburgerType {
         case .BackButton:
             switch lineIndex {
             case 0:
-                var animRotate = CAKeyframeAnimation(keyPath: "transform.rotation")
+                let animRotate = CAKeyframeAnimation(keyPath: "transform.rotation")
                 animRotate.values = forward ? [ 0, (M_PI*5/4) ] : [ (M_PI*5/4), 0]
                 animRotate.calculationMode = kCAAnimationCubic
                 animRotate.keyTimes = [ 0, 0.33, 0.73, 1.0]
                 
-                var startPoint = forward ? CGPointMake(_lineCenter.x, _lineCenter.y - _lineHeight - _lineSpacing) : CGPointMake(_lineCenter.x - scale(10), _lineCenter.y + _lineHeight + scale(7.2))
-                var endPoint = forward ? CGPointMake(_lineCenter.x - scale(10), _lineCenter.y + _lineHeight + scale(7.2)) : CGPointMake(_lineCenter.x, _lineCenter.y - _lineHeight - _lineSpacing)
-                var controlPoint = CGPointMake(_lineCenter.x + scale(15), _lineCenter.y)
+                let startPoint = forward ? CGPointMake(_lineCenter.x, _lineCenter.y - _lineHeight - _lineSpacing) : CGPointMake(_lineCenter.x - scale(10), _lineCenter.y + _lineHeight + scale(7.2))
+                let endPoint = forward ? CGPointMake(_lineCenter.x - scale(10), _lineCenter.y + _lineHeight + scale(7.2)) : CGPointMake(_lineCenter.x, _lineCenter.y - _lineHeight - _lineSpacing)
+                let controlPoint = CGPointMake(_lineCenter.x + scale(15), _lineCenter.y)
                     
-                var animPosition = CAKeyframeAnimation(keyPath: "position")
+                let animPosition = CAKeyframeAnimation(keyPath: "position")
                 animPosition.path = UIBezierPath.animateBezierPath(startPoint: startPoint, endPoint: endPoint, controlPoint: controlPoint).CGPath
                 animPosition.removedOnCompletion = false
                 animPosition.fillMode = kCAFillModeForwards
                 
                 return [ animRotate, animPosition ]
             case 1:
-                var animRotate = CAKeyframeAnimation(keyPath: "transform.rotation")
+                let animRotate = CAKeyframeAnimation(keyPath: "transform.rotation")
                 animRotate.values = forward ? [ 0, (M_PI) ] : [ (M_PI), 0]
                 
                 return [ animRotate ]
             case 2:
-                var animRotate = CAKeyframeAnimation(keyPath: "transform.rotation")
+                let animRotate = CAKeyframeAnimation(keyPath: "transform.rotation")
                 animRotate.values = forward ? [ 0, (-M_PI*5/4) ] : [ (-M_PI*5/4), 0]
                 animRotate.calculationMode = kCAAnimationCubic
                 animRotate.keyTimes = [ 0, 0.33, 0.73, 1.0]
                 
-                var startPoint = forward ? CGPointMake(_lineCenter.x, _lineCenter.y + _lineHeight + _lineSpacing) : CGPointMake(_lineCenter.x - scale(10), _lineCenter.y - _lineHeight - scale(7.2))
-                var endPoint = forward ? CGPointMake(_lineCenter.x - scale(10), _lineCenter.y - _lineHeight - scale(7.2)) : CGPointMake(_lineCenter.x, _lineCenter.y + _lineHeight + _lineSpacing)
-                var controlPoint = CGPointMake(_lineCenter.x + scale(15), _lineCenter.y)
+                let startPoint = forward ? CGPointMake(_lineCenter.x, _lineCenter.y + _lineHeight + _lineSpacing) : CGPointMake(_lineCenter.x - scale(10), _lineCenter.y - _lineHeight - scale(7.2))
+                let endPoint = forward ? CGPointMake(_lineCenter.x - scale(10), _lineCenter.y - _lineHeight - scale(7.2)) : CGPointMake(_lineCenter.x, _lineCenter.y + _lineHeight + _lineSpacing)
+                let controlPoint = CGPointMake(_lineCenter.x + scale(15), _lineCenter.y)
                 
-                var animPosition = CAKeyframeAnimation(keyPath: "position")
+                let animPosition = CAKeyframeAnimation(keyPath: "position")
                 animPosition.path = UIBezierPath.animateBezierPath(startPoint: startPoint, endPoint: endPoint, controlPoint: controlPoint).CGPath
                 animPosition.removedOnCompletion = false
                 animPosition.fillMode = kCAFillModeForwards
@@ -208,40 +208,40 @@ class LBHamburgerButton: UIButton {
         case .CloseButton:
             switch lineIndex {
             case 0:
-                var animRotate = CAKeyframeAnimation(keyPath: "transform.rotation")
+                let animRotate = CAKeyframeAnimation(keyPath: "transform.rotation")
                 animRotate.values = forward ? [ 0, (-M_PI*5/4) ] : [ (-M_PI*5/4), 0]
                 animRotate.calculationMode = kCAAnimationCubic
                 animRotate.keyTimes = [ 0, 0.33, 0.73, 1.0]
                 
-                var startPoint = forward ? CGPointMake(_lineCenter.x, _lineCenter.y - _lineHeight - _lineSpacing) : _lineCenter
-                var endPoint = forward ? _lineCenter : CGPointMake(_lineCenter.x, _lineCenter.y - _lineHeight - _lineSpacing)
-                var controlPoint = CGPointMake(_lineCenter.x + scale(20), _lineCenter.y - _lineHeight - scale(5))
+                let startPoint = forward ? CGPointMake(_lineCenter.x, _lineCenter.y - _lineHeight - _lineSpacing) : _lineCenter
+                let endPoint = forward ? _lineCenter : CGPointMake(_lineCenter.x, _lineCenter.y - _lineHeight - _lineSpacing)
+                let controlPoint = CGPointMake(_lineCenter.x + scale(20), _lineCenter.y - _lineHeight - scale(5))
                 
-                var animPosition = CAKeyframeAnimation(keyPath: "position")
+                let animPosition = CAKeyframeAnimation(keyPath: "position")
                 animPosition.path = UIBezierPath.animateBezierPath(startPoint: startPoint, endPoint: endPoint, controlPoint: controlPoint).CGPath
                 animPosition.removedOnCompletion = false
                 animPosition.fillMode = kCAFillModeForwards
                 
                 return [ animRotate, animPosition ]
             case 1:
-                var animRotate = CAKeyframeAnimation(keyPath: "transform.rotation")
+                let animRotate = CAKeyframeAnimation(keyPath: "transform.rotation")
                 animRotate.values = forward ? [ 0, (M_PI) ] : [ (M_PI), 0]
                 
-                var animScale = CAKeyframeAnimation(keyPath: "transform.scale.x")
+                let animScale = CAKeyframeAnimation(keyPath: "transform.scale.x")
                 animScale.values = forward ? [ 1, 0.1 ] : [ 0.1, 1 ]
                 
                 return [ animRotate, animScale ]
             case 2:
-                var animRotate = CAKeyframeAnimation(keyPath: "transform.rotation")
+                let animRotate = CAKeyframeAnimation(keyPath: "transform.rotation")
                 animRotate.values = forward ? [ 0, (M_PI*5/4) ] : [ (M_PI*5/4), 0]
                 animRotate.calculationMode = kCAAnimationCubic
                 animRotate.keyTimes = [ 0, 0.33, 0.73, 1.0]
                 
-                var startPoint = forward ? CGPointMake(_lineCenter.x, _lineCenter.y + _lineHeight + _lineSpacing) : _lineCenter
-                var endPoint = forward ? _lineCenter : CGPointMake(_lineCenter.x, _lineCenter.y + _lineHeight + _lineSpacing)
-                var controlPoint = CGPointMake(_lineCenter.x - scale(20), _lineCenter.y + _lineHeight + scale(5))
+                let startPoint = forward ? CGPointMake(_lineCenter.x, _lineCenter.y + _lineHeight + _lineSpacing) : _lineCenter
+                let endPoint = forward ? _lineCenter : CGPointMake(_lineCenter.x, _lineCenter.y + _lineHeight + _lineSpacing)
+                let controlPoint = CGPointMake(_lineCenter.x - scale(20), _lineCenter.y + _lineHeight + scale(5))
                 
-                var animPosition = CAKeyframeAnimation(keyPath: "position")
+                let animPosition = CAKeyframeAnimation(keyPath: "position")
                 animPosition.path = UIBezierPath.animateBezierPath(startPoint: startPoint, endPoint: endPoint, controlPoint: controlPoint).CGPath
                 animPosition.removedOnCompletion = false
                 animPosition.fillMode = kCAFillModeForwards
@@ -269,7 +269,7 @@ extension CAShapeLayer {
         
         self.init()
         
-        var path = UIBezierPath()
+        let path = UIBezierPath()
         path.moveToPoint(CGPointMake(0, 0))
         path.addLineToPoint(CGPointMake(frame.size.width, 0))
         
@@ -277,7 +277,7 @@ extension CAShapeLayer {
         self.lineWidth = frame.size.height
         self.strokeColor = color.CGColor
         
-        var bound : CGPathRef = CGPathCreateCopyByStrokingPath(self.path, nil, self.lineWidth, kCGLineCapButt, kCGLineJoinMiter, self.miterLimit)
+        let bound : CGPathRef = CGPathCreateCopyByStrokingPath(self.path, nil, self.lineWidth, CGLineCap.Butt, CGLineJoin.Miter, self.miterLimit)!
         self.bounds = CGPathGetBoundingBox(bound)
         
         self.position = position
@@ -298,9 +298,9 @@ extension CALayer {
 
 extension UIBezierPath {
 
-    class func animateBezierPath(#startPoint:CGPoint, endPoint:CGPoint, controlPoint:CGPoint) -> UIBezierPath {
+    class func animateBezierPath(startPoint startPoint:CGPoint, endPoint:CGPoint, controlPoint:CGPoint) -> UIBezierPath {
         
-        var path = UIBezierPath()
+        let path = UIBezierPath()
         path.moveToPoint(startPoint)
         path.addQuadCurveToPoint(endPoint, controlPoint: controlPoint)
         return path
