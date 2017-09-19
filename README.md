@@ -36,8 +36,8 @@ buttonHamburger = [[LBHamburgerButton alloc] initWithFrame:CGRectMake(0, 0, 100,
                                   color:[UIColor whiteColor]];
 ```
 ```swift
-var hamburgerButton = LBHamburgerButton(frame: CGRectMake(0, 0, 100, 100))
-hamburgerButton.setUpHamburger(type: LBHamburgerButtonType.CloseButton, lineWidth: 50, lineHeight: 50/6, lineSpacing: 5, lineCenter: CGPointMake(50, 50), color: UIColor.whiteColor())
+var hamburgerButton = LBHamburgerButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+hamburgerButton.setUpHamburger(type: LBHamburgerButtonType.closeButton, lineWidth: 50, lineHeight: 50/6, lineSpacing: 5, lineCenter: CGPoint(x: 50, y: 50), color: UIColor.white)
 ```
 
 or use full contructor like this:
@@ -52,7 +52,7 @@ buttonHamburger = [[LBHamburgerButton alloc] initWithFrame:CGRectMake(0, 0, 100,
                                                      color:[UIColor whiteColor]];
 ```
 ```swift
-var hamburgerButton = LBHamburgerButton(frame: CGRectMake(0, 0, 100, 100), type: LBHamburgerButtonType.CloseButton, lineWidth: 50, lineHeight: 50/6, lineSpacing: 5, lineCenter: CGPointMake(50, 50), color: UIColor.whiteColor())
+var hamburgerButton = LBHamburgerButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100), type: LBHamburgerButtonType.closeButton, lineWidth: 50, lineHeight: 50/6, lineSpacing: 5, lineCenter: CGPoint(x: 50, y: 50), color: UIColor.white)
 ```
 
 Set other propertises, add target add it to view like UIButton.
@@ -65,9 +65,9 @@ Set other propertises, add target add it to view like UIButton.
 [self.view addSubview:buttonHamburger];
 ```
 ```swift
-hamburgerButton.center = CGPointMake(120, 120)
-hamburgerButton.backgroundColor = UIColor.blackColor()
-hamburgerButton.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+hamburgerButton.center = CGPoint(x: 120, y: 120)
+hamburgerButton.backgroundColor = UIColor.black
+hamburgerButton.addTarget(self, action: #selector(LBViewController.buttonPressed(_:)), forControlEvents: UIControlEvents.touchUpInside)
 
 self.view.addSubview(hamburgerButton)
 ```
@@ -81,13 +81,16 @@ When you want to switch state, just call `switchState`.
 }
 ```
 ```swift
-func buttonPressed(sender: UIButton) {
+@objc func buttonPressed(sender: UIButton) {
   var btn = sender as LBHamburgerButton
   btn.switchState()
 }
 ```
 
 ## Release notes
+
+Version 1.0.2
+Convert to Swift 3
 
 Version 1.0.1
 Convert to Swift
