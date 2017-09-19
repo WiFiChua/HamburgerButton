@@ -3,55 +3,56 @@
 //  HamburgerButton
 //
 //  Created by Bang Nguyen on 03/09/2014.
+//  Converted to Swift 3 by Nikolay Khramchenko 9/19/2017.
 //  Copyright (c) Năm 2014 Bang Nguyen. All rights reserved.
 //
 
 import UIKit
 
 class LBViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-        let hamburgerButtonCloseBig = LBHamburgerButton(frame: CGRectMake(0, 0, 100, 100), type: LBHamburgerButtonType.CloseButton, lineWidth: 50, lineHeight: 50/6, lineSpacing: 5, lineCenter: CGPointMake(50, 50), color: UIColor.whiteColor())
-        hamburgerButtonCloseBig.center = CGPointMake(120, 120)
-        hamburgerButtonCloseBig.backgroundColor = UIColor.blackColor()
-        hamburgerButtonCloseBig.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        let hamburgerButtonCloseBig = LBHamburgerButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100), type: LBHamburgerButtonType.closeButton, lineWidth: 50, lineHeight: 50/6, lineSpacing: 5, lineCenter: CGPoint(x: 50, y: 50), color: UIColor.white)
+        hamburgerButtonCloseBig.center = CGPoint(x: 120, y: 120)
+        hamburgerButtonCloseBig.backgroundColor = UIColor.black
+        hamburgerButtonCloseBig.addTarget(self, action: #selector(LBViewController.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         self.view.addSubview(hamburgerButtonCloseBig)
         
-        let hamburgerButtonCloseSmall = LBHamburgerButton(frame: CGRectMake(0, 0, 50, 50), type: LBHamburgerButtonType.CloseButton, lineWidth: 20, lineHeight: 20/6, lineSpacing: 2, lineCenter: CGPointMake(25, 25), color: UIColor.whiteColor())
-        hamburgerButtonCloseSmall.center = CGPointMake(hamburgerButtonCloseBig.center.x + 100, 120)
-        hamburgerButtonCloseSmall.backgroundColor = UIColor.blackColor()
-        hamburgerButtonCloseSmall.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        let hamburgerButtonCloseSmall = LBHamburgerButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50), type: LBHamburgerButtonType.closeButton, lineWidth: 20, lineHeight: 20/6, lineSpacing: 2, lineCenter: CGPoint(x: 25, y: 25), color: UIColor.white)
+        hamburgerButtonCloseSmall.center = CGPoint(x: hamburgerButtonCloseBig.center.x + 100, y: 120)
+        hamburgerButtonCloseSmall.backgroundColor = UIColor.black
+        hamburgerButtonCloseSmall.addTarget(self, action: #selector(LBViewController.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         self.view.addSubview(hamburgerButtonCloseSmall)
         
-        let hamburgerButtonBackBig = LBHamburgerButton(frame: CGRectMake(0, 0, 100, 100), type: LBHamburgerButtonType.BackButton, lineWidth: 50, lineHeight: 50/6, lineSpacing: 5, lineCenter: CGPointMake(50, 50), color: UIColor.whiteColor())
-        hamburgerButtonBackBig.center = CGPointMake(120, hamburgerButtonCloseBig.center.y + 120)
-        hamburgerButtonBackBig.backgroundColor = UIColor.blackColor()
-        hamburgerButtonBackBig.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        let hamburgerButtonBackBig = LBHamburgerButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100), type: LBHamburgerButtonType.backButton, lineWidth: 50, lineHeight: 50/6, lineSpacing: 5, lineCenter: CGPoint(x: 50, y: 50), color: UIColor.white)
+        hamburgerButtonBackBig.center = CGPoint(x: 120, y: hamburgerButtonCloseBig.center.y + 120)
+        hamburgerButtonBackBig.backgroundColor = UIColor.black
+        hamburgerButtonBackBig.addTarget(self, action: #selector(LBViewController.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         self.view.addSubview(hamburgerButtonBackBig)
         
-        let hamburgerButtonBackSmall = LBHamburgerButton(frame: CGRectMake(0, 0, 50, 50), type: LBHamburgerButtonType.BackButton, lineWidth: 20, lineHeight: 20/6, lineSpacing: 2, lineCenter: CGPointMake(25, 25), color: UIColor.whiteColor())
-        hamburgerButtonBackSmall.center = CGPointMake(hamburgerButtonBackBig.center.x + 100, hamburgerButtonBackBig.center.y)
-        hamburgerButtonBackSmall.backgroundColor = UIColor.blackColor()
-        hamburgerButtonBackSmall.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        let hamburgerButtonBackSmall = LBHamburgerButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50), type: LBHamburgerButtonType.backButton, lineWidth: 20, lineHeight: 20/6, lineSpacing: 2, lineCenter: CGPoint(x: 25, y: 25), color: UIColor.white)
+        hamburgerButtonBackSmall.center = CGPoint(x: hamburgerButtonBackBig.center.x + 100, y: hamburgerButtonBackBig.center.y)
+        hamburgerButtonBackSmall.backgroundColor = UIColor.black
+        hamburgerButtonBackSmall.addTarget(self, action: #selector(LBViewController.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         self.view.addSubview(hamburgerButtonBackSmall)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func buttonPressed(sender: UIButton) {
+    @objc func buttonPressed(_ sender: UIButton) {
         let btn = sender as! LBHamburgerButton
         btn.switchState()
     }
-
+    
 }
